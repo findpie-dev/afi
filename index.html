@@ -372,5 +372,152 @@
         }
     </script>
 
+     <!-- App Script -->
+  <script>
+    let currentLang = 'en';
+    let cart = [];
+
+    const translations = {
+      en: {
+        langBtn: "🇰🇭 ភាសាខ្មែរ",
+        topBanner: "Sale: Up to 50% off all brands for upcoming Pchum Ben!",
+        navSkincare: "Skincare", navSale: "Sale", navBrand: "Brand",
+        titleFacecare: "Face Care", linkCleansers: "Face Cleansers", linkSerums: "Face Serums", linkMoisturizers: "Moisturizers", linkToners: "Toners", linkSunscreens: "Sunscreens",
+        titleHaircare: "Hair Care", linkHairTreatments: "Hair Treatments", linkShampoos: "Shampoos",
+        titleBodycare: "Body Care", linkBathShower: "Bath & Showers", linkBodyMoisturizer: "Body Moisturizers",
+        titleBrands: "All Brands",
+        popupImgSrc: "pchumbeneng.png", popupBtn: "SHOP THE SALE",
+        featuredTitle: "Pchum Ben Special Discount Products",
+        cartTitle: "Your Cart", emptyMsg: "Your cart is empty.",
+        totalLabel: "Total:", checkoutBtn: "PLACE ORDER NOW",
+        alertOrder: "Thank you for your order! We will call you to confirm delivery."
+      },
+      km: {
+        langBtn: "🇬🇧 English",
+        topBanner: "ការបញ្ចុះតម្លៃ៖ បញ្ចុះតម្លៃរហូតដល់ ៥០% លើគ្រប់ម៉ាកផលិតផល សម្រាប់ពិធីបុណ្យភ្ជុំបិណ្ឌ!",
+        navSkincare: "ថែរក្សាស្បែក", navSale: "បញ្ចុះតម្លៃ", navBrand: "ម៉ាកផលិតផល",
+        titleFacecare: "ថែរក្សាផ្ទៃមុខ", linkCleansers: "សាប៊ូលាងមុខ", linkSerums: "សេរ៉ូមលាបមុខ", linkMoisturizers: "គ្រីមផ្តល់សំណើម", linkToners: "ទឹកតូណ័រ", linkSunscreens: "គ្រីមការពារកម្តៅថ្ងៃ",
+        titleHaircare: "ថែរក្សាសក់", linkHairTreatments: "ផលិតផលព្យាបាលសក់", linkShampoos: "សាប៊ូកក់សក់",
+        titleBodycare: "ថែរក្សាកាយសម្បទា", linkBathShower: "សាប៊ូតងផ្កាឈូក", linkBodyMoisturizer: "គ្រីមលាបខ្លួន",
+        titleBrands: "ម៉ាកផលិតផលទាំងអស់",
+        popupImgSrc: "pchumbenkh.png", popupBtn: "ទិញទំនិញឥឡូវនេះ",
+        featuredTitle: "ផលិតផលបញ្ចុះតម្លៃពិសេសពិធីបុណ្យភ្ជុំបិណ្ឌ",
+        cartTitle: "កន្ត្រកទំនិញរបស់អ្នក", emptyMsg: "កន្ត្រកទំនិញរបស់អ្នកទទេស្អាត។",
+        totalLabel: "សរុប៖", checkoutBtn: "បញ្ជាទិញឥឡូវនេះ",
+        alertOrder: "សូមអរគុណសម្រាប់ការបញ្ជាទិញ! យើងខ្ញុំនឹងទាក់ទងទៅអ្នកដើម្បីបញ្ជាក់ការដឹកជញ្ជូន។"
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'km' : 'en';
+      const langData = translations[currentLang];
+
+      document.getElementById('langBtn').innerText = langData.langBtn;
+      document.getElementById('top-banner-text').innerText = langData.topBanner;
+      
+      // Nav links
+      document.getElementById('nav-skincare').innerText = langData.navSkincare;
+      document.getElementById('nav-sale').innerText = langData.navSale;
+      document.getElementById('nav-brand').innerText = langData.navBrand;
+
+      // Skincare Mega Menu
+      document.getElementById('title-facecare').innerText = langData.titleFacecare;
+      document.getElementById('link-cleansers').innerText = langData.linkCleansers;
+      document.getElementById('link-serums').innerText = langData.linkSerums;
+      document.getElementById('link-moisturizers').innerText = langData.linkMoisturizers;
+      document.getElementById('link-toners').innerText = langData.linkToners;
+      document.getElementById('link-sunscreens').innerText = langData.linkSunscreens;
+
+      document.getElementById('title-haircare').innerText = langData.titleHaircare;
+      document.getElementById('link-hair-treatments').innerText = langData.linkHairTreatments;
+      document.getElementById('link-shampoos').innerText = langData.linkShampoos;
+
+      document.getElementById('title-bodycare').innerText = langData.titleBodycare;
+      document.getElementById('link-bath-shower').innerText = langData.linkBathShower;
+      document.getElementById('link-body-moisturizer').innerText = langData.linkBodyMoisturizer;
+
+      // Brand Menu
+      document.getElementById('title-brands').innerText = langData.titleBrands;
+
+      // Featured Title
+      document.getElementById('featured-title').innerText = langData.featuredTitle;
+
+      // Images
+      document.getElementById('sale-menu-img').src = langData.popupImgSrc;
+      document.getElementById('product-img-1').src = langData.popupImgSrc;
+      document.getElementById('product-img-2').src = langData.popupImgSrc;
+      document.getElementById('product-img-3').src = langData.popupImgSrc;
+
+      // Popup
+      document.getElementById('popup-img').src = langData.popupImgSrc;
+      document.getElementById('popup-btn').innerText = langData.popupBtn;
+      document.getElementById('popupAd').style.display = 'flex';
+
+      // Update cart labels if visible
+      updateCartUI();
+    }
+
+    function closePopup() { document.getElementById('popupAd').style.display = 'none'; }
+
+    function closePopupAndScroll() {
+      closePopup();
+      document.getElementById('featured-products').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleCart() {
+      const modal = document.getElementById('cartModal');
+      modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function addToCart(title, price) {
+      cart.push({ title, price });
+      updateCartUI();
+      toggleCart();
+    }
+
+    function addBundleToCart() {
+      addToCart("Pchum Ben Special Package", 25.00);
+    }
+
+    function updateCartUI() {
+      document.getElementById('cart-count').innerText = cart.length;
+      const listContainer = document.getElementById('cart-items-list');
+      
+      listContainer.innerHTML = "";
+
+      if (cart.length === 0) {
+        listContainer.innerHTML = `<p style="color:#888; font-size:13px;">${translations[currentLang].emptyMsg}</p>`;
+        document.getElementById('cart-total-price').innerText = "$0.00";
+        return;
+      }
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const itemRow = document.createElement('div');
+        itemRow.className = 'cart-item';
+        itemRow.innerHTML = `
+          <span>${index + 1}. ${item.title}</span>
+          <span>$${item.price.toFixed(2)}</span>
+        `;
+        listContainer.appendChild(itemRow);
+      });
+
+      document.getElementById('cart-total-price').innerText = "$" + total.toFixed(2);
+    }
+
+    function processOrder(event) {
+      event.preventDefault();
+      if (cart.length === 0) {
+        alert(translations[currentLang].emptyMsg);
+        return;
+      }
+      alert(translations[currentLang].alertOrder);
+      cart = [];
+      updateCartUI();
+      toggleCart();
+    }
+  </script>
+
 </body>
 </html>
