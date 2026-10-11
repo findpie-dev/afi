@@ -365,6 +365,62 @@
         </ul>
     </nav>
 
+    <!-- Products Section -->
+  <div class="container" id="featured-products">
+    <h2 class="section-title" id="featured-title">Pchum Ben Special Discount Products</h2>
+    <div class="product-grid">
+      
+      <div class="product-card">
+        <img id="product-img-1" src="pchumbeneng.png" alt="Cleanser" class="product-img">
+        <div class="product-title" id="p1-title">Anua Heartleaf Cleansing Foam</div>
+        <div class="product-price">$12.00</div>
+        <button class="add-to-cart-btn" onclick="addToCart('Anua Cleansing Foam', 12.00)">ADD TO CART</button>
+      </div>
+
+      <div class="product-card">
+        <img id="product-img-2" src="pchumbeneng.png" alt="Serum" class="product-img">
+        <div class="product-title" id="p2-title">Beauty of Joseon Glow Serum</div>
+        <div class="product-price">$14.50</div>
+        <button class="add-to-cart-btn" onclick="addToCart('Beauty of Joseon Serum', 14.50)">ADD TO CART</button>
+      </div>
+
+      <div class="product-card">
+        <img id="product-img-3" src="pchumbeneng.png" alt="Sunscreen" class="product-img">
+        <div class="product-title" id="p3-title">COSRX Aloe Soothing Sunscreen</div>
+        <div class="product-price">$11.00</div>
+        <button class="add-to-cart-btn" onclick="addToCart('COSRX Sunscreen', 11.00)">ADD TO CART</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div>
+      <div class="cart-header">
+        <h3 id="cart-title">Your Cart</h3>
+        <span style="cursor:pointer; font-weight:bold;" onclick="toggleCart()">&times;</span>
+      </div>
+      <div class="cart-items" id="cart-items-list">
+        <p style="color:#888; font-size:13px;" id="empty-msg">Your cart is empty.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="cart-total">
+        <span id="total-label">Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <form class="checkout-form" onsubmit="processOrder(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number (e.g., 012...)" required>
+        <input type="text" placeholder="Delivery Address" required>
+        <button type="submit" class="popup-btn" style="margin-top:5px;" id="checkout-btn">PLACE ORDER NOW</button>
+      </form>
+    </div>
+  </div>
+
+
     <!-- JavaScript to Close Pop-up -->
     <script>
         function closePopup() {
