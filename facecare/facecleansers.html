@@ -146,6 +146,35 @@
     </div>
 
 
+
+     <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div>
+      <div class="cart-header">
+        <h3 id="cart-title">Your Cart</h3>
+        <span style="cursor:pointer; font-weight:bold;" onclick="toggleCart()">&times;</span>
+      </div>
+      <div class="cart-items" id="cart-items-list">
+        <p style="color:#888; font-size:13px;" id="empty-msg">Your cart is empty.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="cart-total">
+        <span id="total-label">Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <form class="checkout-form" onsubmit="processOrder(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number (e.g., 012...)" required>
+        <input type="text" placeholder="Delivery Address" required>
+        <button type="submit" class="popup-btn" style="margin-top:5px;" id="checkout-btn">PLACE ORDER NOW</button>
+      </form>
+    </div>
+  </div>
+
+
+
     
 </body>
 </html>
