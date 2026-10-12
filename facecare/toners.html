@@ -5,144 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-        }
-       
-        h1{
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-       
-        /* Product Grid Container */
-        .product-grid{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Individual Product Card */
-        .product-card {
-            background-color: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Product Images Styling */
-        .product-card-img{
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            color: #222;
-            margin-bottom: 8px;
-        }
-
-        .product-name {
-            font-size: 14px;
-            font-weight: bold;
-            color: #222;
-            margin-bottom: 8px;
-            height: 40px; /* Keeps titles aligned */
-        }
-
-        /* Unit Price  */
-        .product-price{
-            font-size: 14px;
-            color: #8B2BE2;
-            font-weight: bold;
-        }
+        
     </style>
 </head>
 <body>
-    <h1>Toners Collection</h1>
+    <div class="container" id="featured-products">
+        <h1 class="section-title" id="fatured-title">Toners Collection</h1> 
+        <div class="product-grid"
+    
 
-     <div class="product-card">
-        <img src="../toners/atone.jpg" class="product-card-img">
-        <div class="product-name"> AnuaHeartleaf 77% Soothing Toner</div>
-        <div class="product-price">$22.00</div>
+            <div class="product-card">
+                <img id="product-img-001" src="../toners/atone.jpg" class="product-img">
+                <div class="product-title" id="p001-title"> AnuaHeartleaf 77% Soothing Toner</div>
+                <div class="product-price">$22.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Anua Heartleaf 77% Soothing Toner',22.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-002" src="../toners/b.jpg" class="product-img">
+                <div class="product-title" id="p002-title">BOJ Green Pum Refreshing Toner</div>
+                <div class="product-price">$17.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('BOJ Refreshing Toner',17.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-003" src="../toners/cx.jpg" class="product-img">
+                <div class="product-title" id="p003-title">COSRX AHA/BHA Clarifying Toner</div>
+                <div class="product-price">$17.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('COSRX Clarifying Toner',17.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-004" src="../toners/iu.jpg" class="product-img">
+                <div class="product-title" id="p004-title">iUNIK Rose Galactomyces Essential Toner</div>
+                <div class="product-price">$17.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('iUNIK Essential Toner Toner',17.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-005" src="../toners/l.jpg" class="product-img">
+                <div class="product-title" id="p005-title">Laneige Water Blank Blue Hyaluronic Exfoliating Toner</div>
+                <div class="product-price">$34.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Laneige Exfoliating Toner',34.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-006" src="../toners/m.jpg" class="product-img">
+                <div class="product-title" id="p006-title">Medicube Zero Pore Toner</div>
+                <div class="product-price">$28.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Medicube Zero Pore Toner',28.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-007" src="../toners/al.jpg" class="product-img">
+                <div class="product-title" id="p007-title">Dr.Althea 85% Toitu Green Power Toner</div>
+                <div class="product-price">$21.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Dr.Althea Power Toner',21.50)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-008" src="../toners/n.jpg" class="product-img">
+                <div class="product-title" id="p008-title">Numbuzin No.3 Super Glowing Essence Toner</div>
+                <div class="product-price">$24.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Numbuzin No.3 Essence Toner',24.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-009" src="../toners/go.jpg" class="product-img">
+                <div class="product-title" id="p009-title">Goodal Ice Heartleaf Hyaluron Soothing Toner</div>
+                <div class="product-price">$21.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Goodal Soothing Toner',21.50)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-010" src="../toners/bid.jpg" class="product-img">
+                <div class="product-title" id="p010-title">Biodance First Synergy Toner</div>
+                <div class="product-price">$24.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Biodance First Synergy Toner',24.00)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-011" src="../toners/mma.jpg" class="product-img">
+                <div class="product-title" id="p011-title">MARY&MAY Bifida Toner</div>
+                <div class="product-price">$19.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Mary&May Bifida Toner',19.50)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-012" src="../toners/bib.jpg" class="product-img">
+                <div class="product-title" id="p012-title">Abib Heartleaf Calming Toner</div>
+                <div class="product-price">$19.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Abib Calming Toner',19.50)">ADD TO CART</button>
+            </div>
+        
+             <div class="product-card">
+                <img id="product-img-013" src="../toners/mixt.jpg" class="product-img">
+                <div class="product-title" id="p013-title">mixsoon Bifida Toner</div>
+                <div class="product-price">$19.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('mixsoon Bifida Toner',19.50)">ADD TO CART</button>
+            </div>
+        </div>
     </div>
 
-     <div class="product-card">
-        <img src="../toners/b.jpg" class="product-card-img">
-        <div class="product-name">BOJ Green Pum Refreshing Toner</div>
-        <div class="product-price">$17.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/cx.jpg" class="product-card-img">
-        <div class="product-name">COSRX AHA/BHA Clarifying Toner</div>
-        <div class="product-price">$17.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/iu.jpg" class="product-card-img">
-        <div class="product-name">iUNIK Rose Galactomyces Essential Toner</div>
-        <div class="product-price">$17.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/l.jpg" class="product-card-img">
-        <div class="product-name">Laneige Water Blank Blue Hyaluronic Exfoliating Toner</div>
-        <div class="product-price">$34.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/m.jpg" class="product-card-img">
-        <div class="product-name">Medicube Zero Pore Toner</div>
-        <div class="product-price">$28.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/al.jpg" class="product-card-img">
-        <div class="product-name">Dr.Althea 85% Toitu Green Power Toner</div>
-        <div class="product-price">$21.50</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/n.jpg" class="product-card-img">
-        <div class="product-name">Numbuzin No.3 Super Glowing Essence Toner</div>
-        <div class="product-price">$24.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/go.jpg" class="product-card-img">
-        <div class="product-name">Goodal Ice Heartleaf Hyaluron Soothing Toner</div>
-        <div class="product-price">$21.50</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/bid.jpg" class="product-card-img">
-        <div class="product-name">Biodance First Synergy Toner</div>
-        <div class="product-price">$24.00</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/mma.jpg" class="product-card-img">
-        <div class="product-name">MARY&MAY Bifida Toner</div>
-        <div class="product-price">$19.50</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/bib.jpg" class="product-card-img">
-        <div class="product-name">Abib Heartleaf Calming Toner</div>
-        <div class="product-price">$19.50</div>
-    </div>
-
-     <div class="product-card">
-        <img src="../toners/mixt.jpg" class="product-card-img">
-        <div class="product-name">mixsoon Bifida Toner</div>
-        <div class="product-price">$19.50</div>
-    </div>
-
-     
+    
 </body>
 </html>
