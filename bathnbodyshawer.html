@@ -274,76 +274,94 @@
     </style>
 </head>
 <body>
+
     
-    <h1>BODY CARE</h1>
-
-    <div class="product-card">
-        <img src="sm.jpg" width="300" height="300">
-        <div class="product-name">STRAWBERRY MILK</div>
-        <div class="product-price">$4.50</div>
-    </div>
-
-    <div class="product-card">
-        <img src="cv.jpg" width="300" height="300">
-        <div class="product-name">Cera Ve </div>
-        <div class="product-price">$18.50</div>
-    </div>
+    
+    <div class="container" id="featured-products">
+        <h1 class="section-title" id="featured-title">Bath&Shower/Body Moisturizers</h1>
+        <div class="product-grid">
+    
         
-    <div class="product-card">
-         <img src="ds.jpg" width="300" height="300">
-        <div class="product-name">Dove Scrub</div>
-        <div class="product-price">$13.50</div>
-    </div>
-
-    <div class="product-card">
-        <img src="vl.jpg" width="300" height="300">
-        <div class="product-name">Vaseline Body Lotions </div>
-        <div class="product-price">$7.50</div>
-    </div>
-    <div class="product-card">
-        <img src="vo.jpg" width="300" height="300">
-        <div class="product-name">Nivea Oil Infuseb Lotion </div>
-        <div class="product-price">$17.00</div>
-    </div>
-
-    <div class="product-card">
-        <img src="nivea.jpg" width="200" height="200">
-        <div class="product-name">Nivea White Lotion</div>
-        <div class="product-price">$17.50</div>
-    </div>
+            <div class="product-card">
+                <img id="product-img-3a" src="sm.jpg" class="product-img">
+                <div class="product-title" id="p3a-title">STRAWBERRY MILK</div>
+                <div class="product-price">$4.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Strawberry Milk',4.50)">ADD TO CART</button>
+            </div>
         
-    <div class="product-card">
-         <img src="cc.jpg" width="200" height="300">
-        <div class="product-name">Vaseline Intensive Care</div>
-        <div class="product-price">$16.00</div>
-    </div>
-
-    <div class="product-card">
-        <img src="relaxing.jpg" width="300">
-        <div class="product-name">Dove Relaxing</div>
-        <div class="product-price">$8.50</div>
-    </div>
-    <div class="product-card">
-        <img src="cleanning.jpg" width="300" height="300">
-        <div class="product-name">STRAWBERRY Milk Cleanning Foam</div>
-        <div class="product-price">$6.50</div>
-    </div>
+            <div class="product-card">
+                <img id="product-img-3b" src="cv.jpg" class="product-img" >
+                <div class="product-title" id="p3b-title">Cera Ve </div>
+                <div class="product-price">$18.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Cera Ve',18.50)">ADD TO CART</button>
+            </div>
+                
+            <div class="product-card">
+                 <img id="product-img-3c" src="ds.jpg" class="product-img" >
+                <div class="product-title" id="p3c-title">Dove Scrub</div>
+                <div class="product-price">$13.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Dove Scrub',13.50)">ADD TO CART</button>
+            </div>
         
-    <div class="product-card">
-         <img src="original.jpg" width="300" height="300">
-        <div class="product-name">Dove Original Deodorent</div>
-        <div class="product-price">$4.00</div>
+            <div class="product-card">
+                <img id="product-img-3d" src="vl.jpg" class="product-img">
+                <div class="product-title" id="p3d-title">Vaseline Body Lotions </div>
+                <div class="product-price">$7.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Vaseline Body Lotion',7.50)">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img id="product-img-3e" src="vo.jpg" class="product-img">
+                <div class="product-title" id="p3e-title">Nivea Oil Infuseb Lotion </div>
+                <div class="product-price">$17.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Nivea Oil Infuseb Lotion',17.00)">ADD TO CART</button>
+            </div>
+        
+            <div class="product-card">
+                <img id="product-img-3f" src="nivea.jpg" class="product-img">
+                <div class="product-title" id="p3f-title">Nivea White Lotion</div>
+                <div class="product-price">$17.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Nivea White Lotion',17.50)">ADD TO CART</button>
+            </div>
+                
+            <div class="product-card">
+                 <img id="product-img-3g" src="cc.jpg" class="product-img">
+                <div class="product-title" id="p3g-title">Vaseline Intensive Care</div>
+                <div class="product-price">$16.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Vaeline Intensive Care',16.00)">ADD TO CART</button>
+            </div>
+        
+            <div class="product-card">
+                <img id="product-img-3h" src="relaxing.jpg" class="product-img">
+                <div class="product-title" id="p3h-title">Dove Relaxing</div>
+                <div class="product-price">$8.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Dove Relaxing',8.50)">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img id="product-img-3i" src="cleanning.jpg" class="product-img">
+                <div class="product-title" id="p3i-title">STRAWBERRY Milk Cleanning Foam</div>
+                <div class="product-price">$6.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('STRAWBERRY Milk Cleansing Foam',6.50)">ADD TO CART</button>
+            </div>
+                
+            <div class="product-card">
+                 <img id="product-img-3j" src="original.jpg" class="product-img">
+                <div class="product-title" id="p3j-title">Dove Original Deodorent</div>
+                <div class="product-price">$4.00</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Dove Original Deodorent',4.00)">ADD TO CART</button>
+            </div>
+        
+            <div class="product-card">
+                <img id="product-img-3k" src="dovecare.jpg" class="product-img">
+                <div class="product-title" id="p3k-title">Dove body Spray</div>
+                <div class="product-price">$5.50</div>
+                <button class="at-to-cart-btn" onclick="addToCart('Dove Body Spray',5.50)">ADD TO CART</button>
+            </div>
+         </div>
     </div>
-
-    <div class="product-card">
-        <img src="dovecare.jpg" width="300" height="200">
-        <div class="product-name">Dove body Spray</div>
-        <div class="product-price">$5.50</div>
-    </div>
+    
 
 
-
-    <!-- Cart Modal -->
+     <!-- Cart Modal -->
   <div class="cart-modal" id="cartModal">
     <div>
       <div class="cart-header">
@@ -423,7 +441,7 @@
       document.getElementById('link-serums').innerText = langData.linkSerums;
       document.getElementById('link-moisturizers').innerText = langData.linkMoisturizers;
       document.getElementById('link-toners').innerText = langData.linkToners;
-      document.getElementById('link-sunscreens').innerText = langData.linkSunscreens;
+      document.getElementById('link-sunscreen').innerText = langData.linkSunscreen;
 
       document.getElementById('title-haircare').innerText = langData.titleHaircare;
       document.getElementById('link-hair-treatments').innerText = langData.linkHairTreatments;
@@ -483,7 +501,7 @@
       listContainer.innerHTML = "";
 
       if (cart.length === 0) {
-        listContainer.innerHTML = <p style="color:#888; font-size:13px;">${translations[currentLang].emptyMsg}</p>;
+        listContainer.innerHTML = `<p style="color:#888; font-size:13px;">${translations[currentLang].emptyMsg}</p>`;
         document.getElementById('cart-total-price').innerText = "$0.00";
         return;
       }
@@ -493,10 +511,10 @@
         total += item.price;
         const itemRow = document.createElement('div');
         itemRow.className = 'cart-item';
-        itemRow.innerHTML = 
+        itemRow.innerHTML = `
           <span>${index + 1}. ${item.title}</span>
           <span>$${item.price.toFixed(2)}</span>
-        ;
+        `;
         listContainer.appendChild(itemRow);
       });
 
@@ -514,6 +532,9 @@
       updateCartUI();
       toggleCart();
     }
+  </script>
+
+
   </script>
 </body>
 </html>
