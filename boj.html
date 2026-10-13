@@ -478,6 +478,7 @@
       document.getElementById('nav-skincare').innerText = langData.navSkincare;
       document.getElementById('nav-sale').innerText = langData.navSale;
       document.getElementById('nav-brand').innerText = langData.navBrand;
+
       // Skincare Mega Menu
       document.getElementById('title-facecare').innerText = langData.titleFacecare;
       document.getElementById('link-cleansers').innerText = langData.linkCleansers;
@@ -544,7 +545,7 @@
       listContainer.innerHTML = "";
 
       if (cart.length === 0) {
-        listContainer.innerHTML = <p style="color:#888; font-size:13px;">${translations[currentLang].emptyMsg}</p>;
+        listContainer.innerHTML = `<p style="color:#888; font-size:13px;">${translations[currentLang].emptyMsg}</p>`;
         document.getElementById('cart-total-price').innerText = "$0.00";
         return;
       }
@@ -576,6 +577,7 @@
       toggleCart();
     }
   </script>
+
 
 
 
